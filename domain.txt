@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@siqar.go.id
+    ServerName siqar.go.id
+    ServerAlias www.siqar.go.id
+    DocumentRoot /home/root/websites/siqar.go.id/public_html
+    
+    <Directory /home/root/websites/siqar.go.id/public_html>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    
+    ErrorLog ${APACHE_LOG_DIR}/siqar.go.id-error.log
+    CustomLog ${APACHE_LOG_DIR}/siqar.go.id-access.log combined
+</VirtualHost>

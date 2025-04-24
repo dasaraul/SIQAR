@@ -42,16 +42,16 @@ case 'add':
       $radius= mysqli_real_escape_string($connection, $_POST['radius']);
   }
 
-
-      /* --  Membuat Random Karakter ---- */
-      $random_karakter = md5($name);
-      $shuffle  = substr(str_shuffle($random_karakter),0,5);
-      $code   = ''.$year.'/'.strtoupper($shuffle).'/'.$date.'';
-      /* --  End Random Karakter ---- */
+  /* --  Membuat Random Karakter yang lebih pendek ---- */
+  $year = date('Y');
+  $random_karakter = md5($name);
+  $shuffle = substr(str_shuffle($random_karakter), 0, 5);
+  $code = $year.'-'.strtoupper($shuffle); // Format lebih pendek
+  /* --  End Random Karakter ---- */
       
   if (empty($error)) { 
     $latitude_longtitude = ''.$latitude.','.$longitude.'';
-    $add ="INSERT INTO  building (code,
+    $add ="INSERT INTO building (code,
                         name,
                         address,
                         latitude_longtitude,

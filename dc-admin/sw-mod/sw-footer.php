@@ -22,7 +22,7 @@
     <div class="pull-right hidden-xs">Theme LTE / 
       ' . convert(memory_get_usage()) . '
     </div>
-     &copy; 2022 - ' . DATE('Y') . ' ' . $site_name . ' | Design With <i class="fa fa-heart"></i> From <a class="credits" href="https://klikdatang.com" id="credits" title="klikDatang.com">klikDatang.com</a> - All Rights Reserved
+     &copy; 2022 - ' . DATE('Y') . ' ' . $site_name . ' | All Rights Reserved
   </footer>
 </div>
 <!-- wrapper -->
